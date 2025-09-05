@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-spa-green: #8AAE9F;
+    --color-spa-beige: #F5F0E6;
+    --color-spa-gold: #D4AF37;
+    --color-spa-dark: #333333;
+    --color-spa-light-gray: #F9F9F9;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 rounded-spa font-semibold text-base transition-all duration-300 cursor-pointer shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-spa-green text-white;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-[#7a9d8d] transform -translate-y-0.5 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-spa-green border-2 border-spa-green;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-spa-green text-white transform -translate-y-0.5 shadow-md;
+  }
+  
+  .benefit-item {
+    @apply flex items-center gap-2 bg-white py-2 px-4 rounded-full shadow-spa transition-all duration-300;
+  }
+  
+  .benefit-item:hover {
+    @apply shadow-lg bg-spa-beige;
+  }
+  
+  /* Nuevos estilos para el componente Hero */
+  .hero-gradient {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(245, 240, 230, 0.8));
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(to right, rgba(245, 240, 230, 0.8), rgba(138, 174, 159, 0.4));
+  }
+  
+  .logo-circle {
+    @apply inline-block bg-white/90 p-4 rounded-full shadow-lg;
+  }
+  
+  .scroll-indicator {
+    @apply w-8 h-8 border-r-2 border-b-2 border-spa-green transform rotate-45 mx-auto;
+  }
+}
+
+@layer utilities {
+  /* Animaciones */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  .stagger-delay-1 { animation-delay: 0.1s; }
+  .stagger-delay-2 { animation-delay: 0.2s; }
+  .stagger-delay-3 { animation-delay: 0.3s; }
+  .stagger-delay-4 { animation-delay: 0.4s; }
+  .stagger-delay-5 { animation-delay: 0.5s; }
+  .stagger-delay-6 { animation-delay: 0.6s; }
+  
+  /* Utilidades personalizadas */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Estilos para modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+  .hero-gradient {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+/*estilos personalizados de whatsapp*/
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+/*boton del carrito*/
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/*estilos personalizados de los botones modal de servicios*/
+/* Input de fechas agradable */
+input[type="date"] {
+  background-color: var(--color-spa-beige);
+  color: var(--color-spa-dark);
+  border: 1px solid var(--color-spa-green);
+  border-radius: 0.375rem; /* similar a rounded-md */
+  padding: 0.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="date"]::placeholder {
+  color: var(--color-spa-green);
+  opacity: 0.7;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: var(--color-spa-gold);
+  box-shadow: 0 0 5px var(--color-spa-gold);
+  background-color: var(--color-spa-light-gray);
+  color: var(--color-spa-dark);
+}
+
+
+
