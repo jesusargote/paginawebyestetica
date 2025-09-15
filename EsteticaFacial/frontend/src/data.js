@@ -195,20 +195,20 @@ export const servicesData = {
       ],
       price: "$150.000"
     },
-    {
-      id: 5,
-      title: "Limpiezas faciales profundas",
-      description: "Eliminación profunda de impurezas y células muertas para una piel radiante.",
-      category: "Limpieza",
-      image: "services/limpiesafacialpro.jpg",
-      details: [
-        "Exfoliación con punta de diamante",
-        "Aplicación de vapor para abrir poros",
-        "Extracción de impurezas (puntos negros y espinillas)",
-        "Mascarilla purificante y protector solar"
-      ],
-      price: "$100.000"
-    },
+    // {
+    //   id: 5,
+    //   title: "Limpiezas faciales profundas",
+    //   description: "Eliminación profunda de impurezas y células muertas para una piel radiante.",
+    //   category: "Limpieza",
+    //   image: "services/limpiesafacialpro.jpg",
+    //   details: [
+    //     "Exfoliación con punta de diamante",
+    //     "Aplicación de vapor para abrir poros",
+    //     "Extracción de impurezas (puntos negros y espinillas)",
+    //     "Mascarilla purificante y protector solar"
+    //   ],
+    //   price: "$100.000"
+    // },
     {
       id: 6,
       title: "Plasma rico en plaquetas",
@@ -268,104 +268,104 @@ export const servicesData = {
   },
   {
     name: "Corrientes rusas",
-    video: "/videos/corrientes-rusas.mp4",
-    poster: "/videos/corrientes-rusas-poster.jpg",
+    video: "/videos/Corrientesrusas.mp4",
+    // poster: "/videos/corrientes-rusas-poster.jpg",
     description: "Estimulación eléctrica que fortalece y tonifica la musculatura, mejorando la flacidez."
   },
   {
     name: "Cavitación",
-    video: "/videos/cavitacion.mp4",
-    poster: "/videos/cavitacion-poster.jpg",
+    video: "/videos/Cavitacion.mp4",
+    // poster: "/videos/cavitacion-poster.jpg",
     description: "Tecnología de ultrasonido de baja frecuencia que rompe las células de grasa."
   },
   {
     name: "Ultrasonido",
-    video: "/videos/ultrasonido.mp4",
-    poster: "/videos/ultrasonido-poster.jpg",
+    video: "/videos/Ultrasonido.mp4",
+    // poster: "/videos/ultrasonido-poster.jpg",
     description: "Ondas sonoras que penetran en la piel para reducir celulitis y grasa localizada."
   },
   {
     name: "Radiofrecuencia",
-    video: "/videos/radiofrecuencia.mp4",
-    poster: "/videos/radiofrecuencia-poster.jpg",
+    video: "/videos/RadioFrecuencia.mp4",
+    // poster: "/videos/radiofrecuencia-poster.jpg",
     description: "Energía que calienta las capas profundas de la piel para estimular el colágeno y la elastina."
   },
   {
     name: "Lipolisis láser",
     video: "/videos/lipolisis-laser.mp4",
-    poster: "/videos/lipolisis-laser-poster.jpg",
+    poster: "/services/LipolisisLaser.jpg",
     description: "Procedimiento que utiliza energía láser para licuar la grasa antes de ser eliminada."
   },
   {
     name: "Maderoterapia",
-    video: "/videos/maderoterapia.mp4",
-    poster: "/videos/maderoterapia-poster.jpg",
+    video: "/videos/Maderoterapia.mp4",
+    // poster: "/videos/maderoterapia-poster.jpg",
     description: "Técnica de masaje con instrumentos de madera para moldear, tonificar y drenar."
   },
   {
     name: "Vacumterapia",
-    video: "/videos/vacumterapia.mp4",
-    poster: "/videos/vacumterapia-poster.jpg",
+    // video: "/videos/vacumterapia.mp4",
+    poster: "/services/Vacumterapia.jpg",
     description: "Terapia de succión que mejora la circulación, drena líquidos y reduce la celulitis."
   },
   {
     name: "Alta frecuencia",
-    video: "/videos/alta-frecuencia.mp4",
-    poster: "/videos/alta-frecuencia-poster.jpg",
+    video: "/videos/RadioFrecuencia.mp4",
+    // poster: "/videos/alta-frecuencia-poster.jpg",
     description: "Corriente eléctrica que tiene efectos antisépticos y antiinflamatorios en la piel."
   },
   {
     name: "Pala ultrasónica",
-    video: "/videos/pala-ultrasonica.mp4",
-    poster: "/videos/pala-ultrasonica-poster.jpg",
+    video: "/videos/PalaUltrasonica.mp4",
+    // poster: "/videos/pala-ultrasonica-poster.jpg",
     description: "Dispositivo que utiliza vibración ultrasónica para una limpieza facial profunda y no abrasiva."
   },
   {
     name: "Electroporador",
     video: "/videos/electroporador.mp4",
-    poster: "/videos/electroporador-poster.jpg",
+    poster: "/services/Electropurador.jpg",
     description: "Técnica que abre los poros temporalmente para permitir la penetración de activos cosméticos."
   },
   {
     name: "Vapor ozono",
-    video: "/videos/vapor-ozono.mp4",
-    poster: "/videos/vapor-ozono-poster.jpg",
+    video: "/videos/Vaporozono.mp4",
+    // poster: "/videos/vapor-ozono-poster.jpg",
     description: "Vapor que abre los poros de la piel para facilitar la limpieza y desintoxicación."
   },
   {
     name: "Neatcell, terapia con láser",
-    video: "/videos/neatcell.mp4",
-    poster: "/videos/neatcell-poster.jpg",
+    video: "/videos/TerapiaLaser.mp4",
+    // poster: "/videos/neatcell-poster.jpg",
     description: "Láser de picosegundos para eliminar manchas, tatuajes y rejuvenecer la piel."
   },
   {
     name: "Dermapen",
-    video: "/videos/dermapen.mp4",
-    poster: "/videos/dermapen-poster.jpg",
+    video: "/videos/Dermapen.mp4",
+    // poster: "/videos/dermapen-poster.jpg",
     description: "Microagujas que crean microcanales para estimular la producción de colágeno y la absorción de productos."
   },
   {
     name: "Hifu",
-    video: "/videos/hifu.mp4",
-    poster: "/videos/hifu-poster.jpg",
+    video: "/videos/Hifu.mp4",
+    // poster: "/videos/hifu-poster.jpg",
     description: "Ultrasonido focalizado de alta intensidad para un lifting facial sin cirugía."
   },
   {
     name: "Microdermoabrasión puntas de diamante",
-    video: "/videos/microdermoabrasion.mp4",
-    poster: "/videos/microdermoabrasion-poster.jpg",
+    video: "/videos/Microdermoabrasión.mp4",
+    // poster: "/videos/microdermoabrasion-poster.jpg",
     description: "Exfoliación mecánica que elimina las células muertas y mejora la textura de la piel."
   },
   {
     name: "Esferas con hielo",
-    video: "/videos/esferas-hielo.mp4",
-    poster: "/videos/esferas-hielo-poster.jpg",
+    video: "/videos/EsferasConHielo.mp4",
+    // poster: "/videos/esferas-hielo-poster.jpg",
     description: "Terapia de frío para reducir la inflamación, cerrar poros y calmar la piel."
   },
   {
     name: "Máscara led",
     video: "/videos/mascara-led.mp4",
-    poster: "/videos/mascara-led-poster.jpg",
+    poster: "/services/MascaraLed.jpg",
     description: "Terapia de luz que trata diferentes problemas de la piel como el acné y el envejecimiento."
   }
 ],
