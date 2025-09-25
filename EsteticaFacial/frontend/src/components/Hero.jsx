@@ -18,11 +18,11 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Logo o marca */}
           <div className="mb-8 animate-fade-in-up">
-            <div className="logo-circle">
-              <img src="services/logo.png" alt="Logo Spa & Estética Facial" className="w-full h-full object-contain" />
+            <div className="">
+              <img src="services/logo.png" alt="" className="w-full h-full object-contain" />
             </div>
           </div>
-          
+           
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-semibold text-spa-dark mb-6 leading-tight animate-fade-in-up stagger-delay-1 text-shadow">
             Spa & Estética Facial <span className="text-spa-green">Nubia Argote</span>
           </h1>
@@ -45,7 +45,7 @@ const Hero = () => {
               <span className="text-2xl">✨</span> Incluye: musicoterapia, aromaterapia y jacuzzi
             </div>
             <div className="benefit-item animate-fade-in-up stagger-delay-5">
-              <span className="text-2xl">💳</span> Pagos: PSE, tarjetas, Nequi y Daviplata
+              <span className="text-2xl">💳</span> Pagos: PSE, Nequi y Daviplata
             </div>
             <div className="benefit-item animate-fade-in-up stagger-delay-6">
               <span className="text-2xl">📍</span> Atención por cita · Popayán/Colombia
