@@ -170,6 +170,101 @@ input[type="date"]:focus {
   background-color: var(--color-spa-light-gray);
   color: var(--color-spa-dark);
 }
+.whatsapp-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
 
+.whatsapp-button-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+.whatsapp-button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+/* Ondas de efecto */
+.wave {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #25d366;
+  animation: wave-animation 2s infinite;
+  opacity: 0;
+}
+
+.wave-1 {
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  width: 80px;
+  height: 80px;
+  animation-delay: 0.5s;
+}
+
+.wave-3 {
+  width: 100px;
+  height: 100px;
+  animation-delay: 1s;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.whatsapp-button:hover .whatsapp-tooltip {
+  opacity: 1;
+}
 
