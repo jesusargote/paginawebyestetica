@@ -211,7 +211,7 @@ _Reserva generada automáticamente desde la web_`;
         
         <div>
           <label htmlFor="date" className="block text-sm font-medium text-spa-dark mb-1">
-            Fecha *
+            Fecha cita *
           </label>
           <input
             id="date"

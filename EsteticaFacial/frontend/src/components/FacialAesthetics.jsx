@@ -5,10 +5,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useApp } from "../context/AppContext";
 
 const FacialAesthetics = () => {
+  
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedCard, setExpandedCard] = useState(null);
 
-  const { openServiceModal } = useApp();
+  const { openServiceModal, openConsultationModal } = useApp();
 
   const videoRefs = useRef([]);
   const [playingVideos, setPlayingVideos] = useState({});
@@ -256,7 +257,10 @@ const FacialAesthetics = () => {
           <p className="text-spa-dark mb-5 max-w-2xl mx-auto">
             Nuestros especialistas te recomendarán el tratamiento más adecuado para tus necesidades
           </p>
-          <button className="bg-spa-gold hover:bg-spa-dark text-white font-medium py-3 px-8 rounded-full transition">
+          <button 
+            onClick={openConsultationModal}
+            className="bg-spa-gold hover:bg-spa-dark text-white font-medium py-3 px-8 rounded-full transition"
+          >
             Solicitar consulta
           </button>
         </div>

@@ -1,15 +1,16 @@
 // src/context/AppContext.jsx
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer, useState } from 'react';
 
 // Estado inicial
 const initialState = {
   cart: [],
   reservations: [],
   selectedService: null,
-  isModalOpen: false
+  isModalOpen: false,
+  isConsultationModalOpen: false // ← NUEVO ESTADO
 };
 
-// Acciones
+// Acciones (AGREGAR LAS NUEVAS)
 const actionTypes = {
   ADD_TO_CART: 'ADD_TO_CART',
   REMOVE_FROM_CART: 'REMOVE_FROM_CART',
@@ -17,10 +18,12 @@ const actionTypes = {
   ADD_RESERVATION: 'ADD_RESERVATION',
   OPEN_SERVICE_MODAL: 'OPEN_SERVICE_MODAL',
   CLOSE_MODAL: 'CLOSE_MODAL',
-  UPDATE_CART_ITEM_QUANTITY: 'UPDATE_CART_ITEM_QUANTITY'
+  UPDATE_CART_ITEM_QUANTITY: 'UPDATE_CART_ITEM_QUANTITY',
+  OPEN_CONSULTATION_MODAL: 'OPEN_CONSULTATION_MODAL', // ← NUEVA ACCIÓN
+  CLOSE_CONSULTATION_MODAL: 'CLOSE_CONSULTATION_MODAL' // ← NUEVA ACCIÓN
 };
 
-// Reducer
+// Reducer (AGREGAR LOS NUEVOS CASOS)
 const appReducer = (state, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
@@ -63,6 +66,17 @@ const appReducer = (state, action) => {
             ? { ...item, quantity: action.payload.quantity }
             : item
         ),
+      };
+    // ← NUEVOS CASOS PARA EL MODAL DE CONSULTA
+    case actionTypes.OPEN_CONSULTATION_MODAL:
+      return {
+        ...state,
+        isConsultationModalOpen: true
+      };
+    case actionTypes.CLOSE_CONSULTATION_MODAL:
+      return {
+        ...state,
+        isConsultationModalOpen: false
       };
     default:
       return state;
@@ -116,6 +130,15 @@ export const AppProvider = ({ children }) => {
     });
   };
 
+  // ← NUEVAS FUNCIONES PARA EL MODAL DE CONSULTA
+  const openConsultationModal = () => {
+    dispatch({ type: actionTypes.OPEN_CONSULTATION_MODAL });
+  };
+
+  const closeConsultationModal = () => {
+    dispatch({ type: actionTypes.CLOSE_CONSULTATION_MODAL });
+  };
+
   const value = {
     ...state,
     addToCart,
@@ -124,7 +147,9 @@ export const AppProvider = ({ children }) => {
     addReservation,
     openServiceModal,
     closeModal,
-    updateCartItemQuantity
+    updateCartItemQuantity,
+    openConsultationModal, // ← INCLUIR EN EL VALUE
+    closeConsultationModal // ← INCLUIR EN EL VALUE
   };
 
   return (
